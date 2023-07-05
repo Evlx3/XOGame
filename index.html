@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/0016c4488a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <title>X AND O</title>
+  </head>
+  <body>
+    <main>
+      <div class="grid">
+        <div class="turn" data-id="turn">
+          <i class="fa-regular fa-x turquoise"></i>
+          <p class="turquoise">Player 1, you're up</p>
+        </div>
+
+        <div class="menu" data-id="menu">
+          <button class="menu-btn" data-id="menu-btn">
+            Actions
+            <i class="fa-solid fa-angle-down"></i>
+          </button>
+
+          <div class="dropdown-list hidden" data-id="menu-items">
+            <button class="reset btn-styles" data-id="reset-btn">Reset</button>
+            <button class="newround btn-styles" data-id="new-round-btn">
+              New Round
+            </button>
+          </div>
+        </div>
+
+        <div id="1" class="items" data-id="squares"></div>
+        <div id="2" class="items" data-id="squares"></div>
+        <div id="3" class="items" data-id="squares"></div>
+        <div id="4" class="items" data-id="squares"></div>
+        <div id="5" class="items" data-id="squares"></div>
+        <div id="6" class="items" data-id="squares"></div>
+        <div id="7" class="items" data-id="squares"></div>
+        <div id="8" class="items" data-id="squares"></div>
+        <div id="9" class="items" data-id="squares"></div>
+
+        <div class="score score-box-1">
+          <p>Player 1</p>
+          <span data-id="p1-score">0 Wins</span>
+        </div>
+        <div class="score score-box-2">
+          <p>Ties</p>
+          <span data-id="ties-score">0</span>
+        </div>
+        <div class="score score-box-3">
+          <p>Player 2</p>
+          <span data-id="p2-score">0 Wins</span>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>
+        Original project by
+        <a href="https://twitter.com/megfdev">@megfdev</a> and
+        <a href="https://twitter.com/Ivan00sto">@Ivan00Sto</a> <br />
+        and
+        <a href="https://twitter.com/zg_dev">@zg_dev</a>
+
+        Refactored by
+        <a
+          href="https://www.facebook.com/alhmoud.am/"
+          style="color: var(--turquoise)"
+          >@Ammar</a
+        >
+      </p>
+    </footer>
+
+    <div class="modal hidden" data-id="modal">
+      <div class="modal-container">
+        <p data-id="modal-message">Player 1 Wins!</p>
+        <button data-id="modal-btn">Play Again</button>
+      </div>
+    </div>
+
+    <script src="./javaScript/app.js" type="module"></script>
+  </body>
+</html>
